@@ -1,0 +1,93 @@
+/* Distribution */
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+/* Colors */
+:root{
+--general-bg-color: #E4F0FF;
+--header-bg-color:  #0D417F;
+--person-bg-color:  #B6C0CC;
+--hover-bg-color:#97C6FF;
+--dark-gray:        #72787F;
+}
+
+
+/* Style */
+header{
+    width: 100%;
+    height: 100px;
+    background-color:var(--header-bg-color);
+    color: #D3E4FF;
+    text-align: center;
+}
+header > p{
+    margin-top:50px;
+    margin:0;
+}
+header h1{
+    margin-top: 0;
+    float:initial;
+    font-family: 'Architects Daughter', cursive;
+    color:yellow;
+    font-size: 3em;
+}
+.logos img{
+    margin:10px;
+    height: 80px;
+}
+.left{
+    left:0;
+    float: left;
+}
+
+.right{
+    right:0;
+    float: right;
+}
+body{
+    width: 100%;
+}
+.people{
+    display: inline-grid;
+    grid-template-columns: 40px 50px auto 50px 40px;
+    grid-template-rows: 25% 100px auto;
+}
+
+.person{
+    background-color: var(--person-bg-color);
+    padding: 5px;
+    width: 200px;
+    height: 150px;
+    margin-top: 10px;
+    
+    text-align: center;
+}
+
+.person img{
+    width: 95%;
+    border-radius: 100%;
+}
+.person:hover{
+    background-color: var(--hover-bg-color);
+}
+.person h3::before{
+    content: "💼";
+}
