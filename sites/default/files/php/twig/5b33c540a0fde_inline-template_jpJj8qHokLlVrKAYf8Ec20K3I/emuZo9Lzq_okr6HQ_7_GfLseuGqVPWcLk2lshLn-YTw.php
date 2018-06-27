@@ -1,7 +1,7 @@
 <?php
 
-/* core/themes/classy/templates/navigation/vertical-tabs.html.twig */
-class __TwigTemplate_17de58add493bea9451c19385f1af79c69db195237759f08516bdba08ca7bd5a extends Twig_Template
+/* {# inline_template_start #}<div class="field-plugin-summary">{{ summary|safe_join("<br />") }}</div> */
+class __TwigTemplate_f821c77039c217f90bf7a8f976486c27a1fbd3d077f048bd0be538f78a56fbe7 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -16,13 +16,13 @@ class __TwigTemplate_17de58add493bea9451c19385f1af79c69db195237759f08516bdba08ca
     protected function doDisplay(array $context, array $blocks = array())
     {
         $tags = array();
-        $filters = array();
+        $filters = array("safe_join" => 1);
         $functions = array();
 
         try {
             $this->env->getExtension('Twig_Extension_Sandbox')->checkSecurity(
                 array(),
-                array(),
+                array('safe_join'),
                 array()
             );
         } catch (Twig_Sandbox_SecurityError $e) {
@@ -39,18 +39,15 @@ class __TwigTemplate_17de58add493bea9451c19385f1af79c69db195237759f08516bdba08ca
             throw $e;
         }
 
-        // line 13
-        echo "<div";
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute(($context["attributes"] ?? null), "setAttribute", array(0 => "data-vertical-tabs-panes", 1 => true), "method"), "html", null, true));
-        echo ">";
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["children"] ?? null), "html", null, true));
-        echo "</div>
-";
+        // line 1
+        echo "<div class=\"field-plugin-summary\">";
+        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->renderVar($this->env->getExtension('Drupal\Core\Template\TwigExtension')->safeJoin($this->env, ($context["summary"] ?? null), "<br />")));
+        echo "</div>";
     }
 
     public function getTemplateName()
     {
-        return "core/themes/classy/templates/navigation/vertical-tabs.html.twig";
+        return "{# inline_template_start #}<div class=\"field-plugin-summary\">{{ summary|safe_join(\"<br />\") }}</div>";
     }
 
     public function isTraitable()
@@ -60,7 +57,7 @@ class __TwigTemplate_17de58add493bea9451c19385f1af79c69db195237759f08516bdba08ca
 
     public function getDebugInfo()
     {
-        return array (  43 => 13,);
+        return array (  43 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -73,6 +70,6 @@ class __TwigTemplate_17de58add493bea9451c19385f1af79c69db195237759f08516bdba08ca
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "core/themes/classy/templates/navigation/vertical-tabs.html.twig", "/opt/lampp/htdocs/yearbook/core/themes/classy/templates/navigation/vertical-tabs.html.twig");
+        return new Twig_Source("", "{# inline_template_start #}<div class=\"field-plugin-summary\">{{ summary|safe_join(\"<br />\") }}</div>", "");
     }
 }

@@ -1,4 +1,27 @@
 <?php 
+
+/**
+* Implements hook_theme().
+*
+* Adds a template for the Featured Person block.
+*/
+function yearbook_custom_theme($existing, $type, $theme, $path){
+    return [
+        'featured_person' => [
+            'variables' => [
+                'featured_person_title' => NULL,'featured_person_node' => NULL,],
+                'template' => 'block--featured-person',],
+    ];
+}
+
+// Change Search label
+function yearbook_custom_block_view_search_form_block_alter(array
+&$build, \Drupal\Core\Block\BlockPluginInterface $block) {
+    $build['#configuration']['label'] = t('What are you looking for?');
+
+}
+
+// Show Blocks in site
 /*function yearbook_custom_block_view_alter(array &$build,
 \Drupal\Core\Block\BlockPluginInterface $block) {
 
@@ -7,10 +30,4 @@ ksm($build);
 }*/
 
 
-function
-yearbook_custom_block_view_search_form_block_alter(array
-&$build, \Drupal\Core\Block\BlockPluginInterface $block) {
-    $build['#configuration']['label'] = t('What are you looking for?');
-
-}
 ?>

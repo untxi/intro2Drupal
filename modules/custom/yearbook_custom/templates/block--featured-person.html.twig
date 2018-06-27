@@ -1,0 +1,10 @@
+{#
+/*
+* @file
+* Featured Person block.
+*/
+#}
+<div class="featured-person">
+    <h2>{{ featured_person_title|upper }}</h2>
+    <div>{{ drupal_entity('node', featured_person_node, 'teaser')}}</div>
+</div>

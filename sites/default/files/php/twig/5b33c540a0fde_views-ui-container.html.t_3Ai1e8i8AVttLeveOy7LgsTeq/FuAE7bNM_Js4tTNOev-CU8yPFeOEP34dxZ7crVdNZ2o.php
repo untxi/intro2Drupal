@@ -1,7 +1,7 @@
 <?php
 
-/* core/themes/stable/templates/misc/feed-icon.html.twig */
-class __TwigTemplate_f382d838aa0945099efb3470ad152d24f878eb546a99fd6e91ce4fed85796fdd extends Twig_Template
+/* core/themes/stable/templates/admin/views-ui-container.html.twig */
+class __TwigTemplate_99d24c682470221440dae7749098bbc5b418d4110ca44e36f36ed3b7b5cb0ab1 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -16,13 +16,13 @@ class __TwigTemplate_f382d838aa0945099efb3470ad152d24f878eb546a99fd6e91ce4fed857
     protected function doDisplay(array $context, array $blocks = array())
     {
         $tags = array();
-        $filters = array("t" => 14);
+        $filters = array();
         $functions = array();
 
         try {
             $this->env->getExtension('Twig_Extension_Sandbox')->checkSecurity(
                 array(),
-                array('t'),
+                array(),
                 array()
             );
         } catch (Twig_Sandbox_SecurityError $e) {
@@ -39,23 +39,18 @@ class __TwigTemplate_f382d838aa0945099efb3470ad152d24f878eb546a99fd6e91ce4fed857
             throw $e;
         }
 
-        // line 13
-        echo "<a href=\"";
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["url"] ?? null), "html", null, true));
-        echo "\"";
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute(($context["attributes"] ?? null), "addClass", array(0 => "feed-icon"), "method"), "html", null, true));
-        echo ">
-  ";
-        // line 14
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->renderVar(t("Subscribe to @title", array("@title" => ($context["title"] ?? null)))));
-        echo "
-</a>
+        // line 11
+        echo "<div";
+        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["attributes"] ?? null), "html", null, true));
+        echo ">";
+        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["children"] ?? null), "html", null, true));
+        echo "</div>
 ";
     }
 
     public function getTemplateName()
     {
-        return "core/themes/stable/templates/misc/feed-icon.html.twig";
+        return "core/themes/stable/templates/admin/views-ui-container.html.twig";
     }
 
     public function isTraitable()
@@ -65,7 +60,7 @@ class __TwigTemplate_f382d838aa0945099efb3470ad152d24f878eb546a99fd6e91ce4fed857
 
     public function getDebugInfo()
     {
-        return array (  50 => 14,  43 => 13,);
+        return array (  43 => 11,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -78,6 +73,6 @@ class __TwigTemplate_f382d838aa0945099efb3470ad152d24f878eb546a99fd6e91ce4fed857
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "core/themes/stable/templates/misc/feed-icon.html.twig", "/opt/lampp/htdocs/yearbook/core/themes/stable/templates/misc/feed-icon.html.twig");
+        return new Twig_Source("", "core/themes/stable/templates/admin/views-ui-container.html.twig", "/opt/lampp/htdocs/yearbook/core/themes/stable/templates/admin/views-ui-container.html.twig");
     }
 }
