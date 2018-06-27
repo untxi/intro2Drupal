@@ -1,0 +1,7 @@
+hello_world.content:
+  path: '/hello'
+  defaults:
+    _controller: '\Drupal\yearbook_custom\Controller\HelloController::content'
+    _title: 'Hello World'
+  requirements:
+    _permission: 'access content'
