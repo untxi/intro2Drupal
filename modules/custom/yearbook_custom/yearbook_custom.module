@@ -1,0 +1,16 @@
+<?php 
+/*function yearbook_custom_block_view_alter(array &$build,
+\Drupal\Core\Block\BlockPluginInterface $block) {
+
+ksm($build);
+
+}*/
+
+
+function
+yearbook_custom_block_view_search_form_block_alter(array
+&$build, \Drupal\Core\Block\BlockPluginInterface $block) {
+    $build['#configuration']['label'] = t('What are you looking for?');
+
+}
+?>

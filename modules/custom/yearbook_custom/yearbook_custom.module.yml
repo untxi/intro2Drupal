@@ -1,6 +1,0 @@
-function yearbook_custom_block_view_alter(array &$build,
-\Drupal\Core\Block\BlockPluginInterface $block) {
-
-ksm($build);
-
-}
