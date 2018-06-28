@@ -1,0 +1,11 @@
+{%
+    set classes = [
+        dom_id ? 'js-view-dom-id-' ~ dom_id,
+        'yearbook',
+    ]
+%}
+<section{{ attributes.addClass(classes) }}>
+    {{ rows }}
+    {{ empty }}
+    {{ pager }}
+</section>

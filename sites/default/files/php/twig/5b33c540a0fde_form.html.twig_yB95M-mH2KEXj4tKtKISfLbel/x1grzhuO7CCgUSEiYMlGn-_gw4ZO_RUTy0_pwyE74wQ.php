@@ -1,7 +1,7 @@
 <?php
 
-/* core/themes/classy/templates/form/dropbutton-wrapper.html.twig */
-class __TwigTemplate_fcee0e00aa088841204125ffd2cc9667515fa16923000387ee805056191438bc extends Twig_Template
+/* core/themes/classy/templates/form/form.html.twig */
+class __TwigTemplate_13d9648e31d4c684e1fa61f54c294a50992d08ddc86d069793617372c3ab785b extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -15,13 +15,13 @@ class __TwigTemplate_fcee0e00aa088841204125ffd2cc9667515fa16923000387ee805056191
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $tags = array("if" => 12, "spaceless" => 13);
+        $tags = array();
         $filters = array();
         $functions = array();
 
         try {
             $this->env->getExtension('Twig_Extension_Sandbox')->checkSecurity(
-                array('if', 'spaceless'),
+                array(),
                 array(),
                 array()
             );
@@ -39,28 +39,21 @@ class __TwigTemplate_fcee0e00aa088841204125ffd2cc9667515fa16923000387ee805056191
             throw $e;
         }
 
-        // line 12
-        if (($context["children"] ?? null)) {
-            // line 13
-            echo "  ";
-            ob_start();
-            // line 14
-            echo "    <div class=\"dropbutton-wrapper\">
-      <div class=\"dropbutton-widget\">
-        ";
-            // line 16
-            echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["children"] ?? null), "html", null, true));
-            echo "
-      </div>
-    </div>
+        // line 13
+        echo "<form";
+        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["attributes"] ?? null), "html", null, true));
+        echo ">
   ";
-            echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
-        }
+        // line 14
+        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["children"] ?? null), "html", null, true));
+        echo "
+</form>
+";
     }
 
     public function getTemplateName()
     {
-        return "core/themes/classy/templates/form/dropbutton-wrapper.html.twig";
+        return "core/themes/classy/templates/form/form.html.twig";
     }
 
     public function isTraitable()
@@ -70,7 +63,7 @@ class __TwigTemplate_fcee0e00aa088841204125ffd2cc9667515fa16923000387ee805056191
 
     public function getDebugInfo()
     {
-        return array (  52 => 16,  48 => 14,  45 => 13,  43 => 12,);
+        return array (  48 => 14,  43 => 13,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -86,23 +79,18 @@ class __TwigTemplate_fcee0e00aa088841204125ffd2cc9667515fa16923000387ee805056191
         return new Twig_Source("{#
 /**
  * @file
- * Theme override for a dropbutton wrapper.
+ * Theme override for a 'form' element.
  *
- * Available variables:
- * - children: Contains the child elements of the dropbutton menu.
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
  *
- * @see template_preprocess()
+ * @see template_preprocess_form()
  */
 #}
-{% if children %}
-  {% spaceless %}
-    <div class=\"dropbutton-wrapper\">
-      <div class=\"dropbutton-widget\">
-        {{ children }}
-      </div>
-    </div>
-  {% endspaceless %}
-{% endif %}
-", "core/themes/classy/templates/form/dropbutton-wrapper.html.twig", "/opt/lampp/htdocs/yearbook/core/themes/classy/templates/form/dropbutton-wrapper.html.twig");
+<form{{ attributes }}>
+  {{ children }}
+</form>
+", "core/themes/classy/templates/form/form.html.twig", "/opt/lampp/htdocs/yearbook/core/themes/classy/templates/form/form.html.twig");
     }
 }

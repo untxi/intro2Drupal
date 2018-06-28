@@ -1,7 +1,7 @@
 <?php
 
-/* core/themes/classy/templates/navigation/menu-local-task.html.twig */
-class __TwigTemplate_51aa07ae97fc63e4831197eff3dd7f9985d29616e9c69d79e56ec53db7ce7e13 extends Twig_Template
+/* themes/custom/yearbook/templates/views-view-unformatted--yearbook.html.twig */
+class __TwigTemplate_eb95352176975c3b3d32a91c73ecc71c5c57c10115a67e08339990f8e0d4bea5 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -15,13 +15,13 @@ class __TwigTemplate_51aa07ae97fc63e4831197eff3dd7f9985d29616e9c69d79e56ec53db7c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $tags = array();
+        $tags = array("for" => 1);
         $filters = array();
         $functions = array();
 
         try {
             $this->env->getExtension('Twig_Extension_Sandbox')->checkSecurity(
-                array(),
+                array('for'),
                 array(),
                 array()
             );
@@ -39,18 +39,26 @@ class __TwigTemplate_51aa07ae97fc63e4831197eff3dd7f9985d29616e9c69d79e56ec53db7c
             throw $e;
         }
 
-        // line 17
-        echo "<li";
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute(($context["attributes"] ?? null), "addClass", array(0 => ((($context["is_active"] ?? null)) ? ("is-active") : (""))), "method"), "html", null, true));
-        echo ">";
-        echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, ($context["link"] ?? null), "html", null, true));
-        echo "</li>
+        // line 1
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["rows"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["row"]) {
+            // line 2
+            echo "    <article class=\"person\">";
+            // line 3
+            echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->getAttribute($context["row"], "content", array()), "html", null, true));
+            // line 4
+            echo "</article>
 ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['row'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
     }
 
     public function getTemplateName()
     {
-        return "core/themes/classy/templates/navigation/menu-local-task.html.twig";
+        return "themes/custom/yearbook/templates/views-view-unformatted--yearbook.html.twig";
     }
 
     public function isTraitable()
@@ -60,7 +68,7 @@ class __TwigTemplate_51aa07ae97fc63e4831197eff3dd7f9985d29616e9c69d79e56ec53db7c
 
     public function getDebugInfo()
     {
-        return array (  43 => 17,);
+        return array (  51 => 4,  49 => 3,  47 => 2,  43 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -73,23 +81,10 @@ class __TwigTemplate_51aa07ae97fc63e4831197eff3dd7f9985d29616e9c69d79e56ec53db7c
 
     public function getSourceContext()
     {
-        return new Twig_Source("{#
-/**
- * @file
- * Theme override for a local task link.
- *
- * Available variables:
- * - attributes: HTML attributes for the wrapper element.
- * - is_active: Whether the task item is an active tab.
- * - link: A rendered link element.
- *
- * Note: This template renders the content for each task item in
- * menu-local-tasks.html.twig.
- *
- * @see template_preprocess_menu_local_task()
- */
-#}
-<li{{ attributes.addClass(is_active ? 'is-active') }}>{{ link }}</li>
-", "core/themes/classy/templates/navigation/menu-local-task.html.twig", "/opt/lampp/htdocs/yearbook/core/themes/classy/templates/navigation/menu-local-task.html.twig");
+        return new Twig_Source("{% for row in rows %}
+    <article class=\"person\">
+        {{- row.content -}}
+    </article>
+{% endfor %}", "themes/custom/yearbook/templates/views-view-unformatted--yearbook.html.twig", "/opt/lampp/htdocs/yearbook/themes/custom/yearbook/templates/views-view-unformatted--yearbook.html.twig");
     }
 }
